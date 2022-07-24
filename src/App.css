@@ -1,38 +1,76 @@
-.App {
+.container {
+  max-width: 400px;
+  min-height: 450px;
   text-align: center;
+  background-color: rgb(82, 170, 221);
+  border-radius: 3px;
+  box-shadow: 0 0 5px gray;
+  margin: 0 auto;
+  padding: 5px 30px;
+  margin-top: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.balance {
+  text-align: left;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.incomExpense{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  background-color: honeydew;
+  box-shadow: 0 0 5px gray;
+}
+.history{
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.list {
+  margin: 0;
+  padding: 0;
+}
+.list > li{
+  display: flex;
+  justify-content: space-between;
+  background-color: honeydew;
+  box-shadow: 0 0 5px gray;
+  padding: 5px 0;
+  margin: 4px 0;
+  position: relative
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.trans-form input{
+  width: 100%;
+  margin: 7px 0;
+  padding: 5px 0;
+}
+
+.delete-btn{
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delete-btn:focus {
+  outline: 0;
 }
